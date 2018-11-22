@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-    Mat img = imread("/home/anastasia/Рабочий стол/Lab_2/mono.jpeg", 0);
+    Mat img = imread("/home/anastasia/git/Lab_2/mono.jpeg", 0);
     Mat img_orig;
     Mat img_blur;
     Mat img_addit;
@@ -110,9 +110,6 @@ int main()
     double sred_gauss = 0;
 
     kernel_gauss = Mat::ones(n, n, CV_32F);
-    namedWindow("Kernel", WINDOW_AUTOSIZE);
-    imshow("Kernel", kernel_gauss);
-
   //  sigma = 0.3 * ((n - 1) * 0.5 - 1) + 0.8 ;
 
     int med = n/2;
@@ -126,10 +123,6 @@ int main()
             kernel_gauss.at<float>(j, i) = temp;
         }
     }
-
-    namedWindow("Kernel1", WINDOW_AUTOSIZE);
-    imshow("Kernel1", kernel_gauss);
-
     for(i=0; i<(img_addit.cols-n); i++)
     {
         for(j=0; j<(img_addit.rows-n); j++)
