@@ -19,6 +19,7 @@ Mat magI;
 Mat inverse_magI;
 Mat img_fourier;
 Mat img_inv_fourier;
+Mat img_sobel;
 
 Mat DFT(Mat &img);
 Mat Inverse_DFT(Mat &img);
@@ -26,6 +27,7 @@ Mat myFourier(Mat &img);
 Mat beautiful_spectre(Mat &img);
 void correct_work(Mat &img1, Mat &img2);
 Mat inverse_fourier(complex<double> **sum_dft, Mat &img);
+Mat normalize_fourier(Mat fourier_sums, string name);
 
 int main()
 {
@@ -59,18 +61,130 @@ int main()
     end = clock();
     time_myFourier = (end - begin)/CLOCKS_PER_SEC;
     cout<<"Time My Fourier = "<<time_myFourier<<" s"<<endl;
-/*
-    namedWindow("Input Image", WINDOW_AUTOSIZE);
-    namedWindow("Discrete Fourier Trasform", WINDOW_AUTOSIZE);
-    namedWindow("My Fourier Transform", WINDOW_AUTOSIZE);
-    namedWindow("My Inverse Fourier Transform", WINDOW_AUTOSIZE);
-    namedWindow("Inverse Fourier Transform", WINDOW_AUTOSIZE);
-*/
+
+    Mat dft_img(img.size( ), CV_32FC2);
+    img.convertTo(img, CV_32FC1);
+    dft(img, dft_img, DFT_COMPLEX_OUTPUT);
+    normalize_fourier(dft_img, "CV_DFT");
+    char kernel_type;
+    cout<<"Please enter kernel type"<<endl;
+    cin>>kernel_type;
+    int kernel[3][3];
+    switch ( kernel_type )
+    {
+        case '0':
+        {
+            // горизонтальный Собель
+            int sobel_hor[3][3] ={{-1, -2, -1},
+                                  {0, 0, 0},
+                                  {1, 2, 1}};
+            for ( int i = 0; i < 3; i++ )
+            {
+                for ( int j = 0; j < 3; j++ )
+                {
+                    kernel[i][j] = sobel_hor[i][j];
+                }
+            }
+            break;
+        }
+        case '1':
+        {
+            // вертикальный Собель
+            int sobel_ver[3][3] = {{-1, 0, 1},
+                                  {-2, 0, 2},
+                                  {-1, 0, 1}};
+            for ( int i = 0; i < 3; i++ )
+            {
+                for ( int j = 0; j < 3; j++ )
+                {
+                    kernel[i][j] = sobel_ver[i][j];
+                }
+            }
+            break;
+        }
+        case '2':
+        {
+            // Лапласиан
+            int laplase[3][3] = {{0, 1, 0},
+                                {1, -4, 1},
+                                {0, 1, 0}};
+            for ( int i = 0; i < 3; i++ )
+            {
+                for ( int j = 0; j < 3; j++ )
+                {
+                    kernel[i][j] = laplase[i][j];
+                }
+            }
+            break;
+        }
+        case '3':
+        {
+            // box-фильтр
+            int boxfilter[3][3] = {{1, 1, 1},
+                                  {1, 1, 1},
+                                  {1, 1, 1}};
+            for ( int i = 0; i < 3; i++ )
+            {
+                for ( int j = 0; j < 3; j++ )
+                {
+                    kernel[i][j] = boxfilter[i][j];
+                }
+            }
+            break;
+        }
+        default:
+        {
+            cout << "dftConvolution() : Wrong kernel type !" << endl;
+            break;
+        }
+    }
+    // создаём матрицу с теми же размерами ,что у оригинала и копируем в неё ядра
+    // это необходимо для перемножения спекров (матрицам нужны одинаковые размеры*)
+    // * - если точнее, то кол-во строк одной должно быть равно кол-ву столбцов другой, но полагаю, что mulSpectrums()
+    //одну из матриц переворачивает при необходимости, поэтому на эту условность можно не обращать внимание
+    Mat mat_kernel(img.size( ), CV_32FC1, Scalar(0));
+    for ( int i = 0; i < 3; i++ )
+    {
+        for ( int j = 0; j < 3; j++ )
+        {
+            mat_kernel.at < float >(i, j) = ( float ) kernel[i][j];
+        }
+    }
+    // получаем образ-Фурье ядра и нормализуем его
+    Mat dft_kernel(img.size( ), CV_32FC2);
+    dft(mat_kernel, dft_kernel, DFT_COMPLEX_OUTPUT);
+    beautiful_spectre(dft_kernel);
+    normalize_fourier(dft_kernel, "CV_DFT_kernel");
+    // для красивого вывода на экран меняем квадранты
+    beautiful_spectre(dft_kernel);
+
+    // создаём матрицу для записи результата
+    Mat result(img.size( ), CV_32FC2);
+    // перемножаем спектры изображения и ядра
+    // перемножение спектров двух функций равнозначно свертке самих функций
+    // в контексте изображений перемножение спектра изображения и спектра ядра box-фильтра
+    // (например) сделает то же самое, что происходит в лабе 2
+    mulSpectrums(dft_kernel, dft_img, result, 0, 0);
+    // нормализуем (см.описание функции выше, если забыл)
+    beautiful_spectre(result);
+
+    // создаём матрицу для записи братного преобразования
+    Mat idft_img(img.size( ), CV_32FC1);
+    // преобразуем образ-Фурье в простое изображение
+    dft(result, idft_img, DFT_INVERSE | DFT_REAL_OUTPUT);
+    // нормализуем для нормального отображения
+    normalize(idft_img, idft_img, 0.0, 255, CV_MINMAX);
+    // конвертируем в тип, который может быть выведен на экран
+    idft_img.convertTo(idft_img, CV_8UC1);
+    // выводим изображение
+    imshow("result", idft_img);
+
     imshow("Input Image", img);
     imshow("Discrete Fourier Trasform", magI);
     imshow("Inverse Fourier Transform", inverse_magI);
     imshow("My Fourier Transform", img_fourier);
     imshow("My Inverse Fourier Transform", img_inv_fourier);
+    imshow("Sobel", img_sobel);
 
     waitKey();
     destroyAllWindows();
@@ -285,4 +399,37 @@ Mat inverse_fourier(complex<double> **sum_dft, Mat &img)
   //  beautiful_spectre(img);
     normalize(img, img, 0, 1, CV_MINMAX);
     return img;
+}
+
+Mat normalize_fourier(Mat fourier_sums, string name)
+{
+    // приводим образ-Фурье к удобному для вывода виду
+    // создаём две матрицы для разделения комплексной матрицы
+    Mat fourier_split[2] = {Mat(fourier_sums.rows, fourier_sums.cols, CV_32FC1),
+                            Mat(fourier_sums.rows, fourier_sums.cols, CV_32FC1)};
+    // разделяем реальную и комплексную части в две отдельные матрицы
+    split(fourier_sums, fourier_split);
+    // находим магнитуду образа-Фурье
+    Mat img_fourier;
+    magnitude(fourier_split[0], fourier_split[1], img_fourier);
+    // ко всем значениям матрицы прибавляем единицу на случай, если есть нулевые значения
+    // логарифм от нуля равен минус бесконечности (а компьютер таких вещей не знает)
+    img_fourier += Scalar::all(1);
+    // переводим в логарифмическую шкалу
+    // из ТАУ можно вспомнить, что это делается чтоб слишком маленькие и слишком большие значения
+    //  преобразовывались в более удобный диапазон
+    // например есть 0,00001 и 100000
+    // на графике/изображении это будет выглядеть отвратительно огромным разбросом, который еще и мало информативен
+    // в логарифмической же шкале это будет (числа примерные, но суть отражают) -100 и 100
+    // таким образом информативность резко повышается, а отображение картинкой красивше
+    log(img_fourier, img_fourier);
+    // нормализуем спектр для правильного вывода изображения
+    // нормализация это приведение имеющихся значений в нужный диапазон (у нас 0..255 - значени оттенков серого на изображении)
+    // математику нормализации так и не прошарил, но Титов вроде и не спрашивает
+    normalize(img_fourier, img_fourier, 0, 1, NORM_MINMAX);
+
+    // отображаем полученное изображение с образом-Фурье
+    imshow(name + "dft", img_fourier);
+    // возвращаем нормализованный образ-Фурье
+    return img_fourier;
 }

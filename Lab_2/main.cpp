@@ -131,7 +131,7 @@ int main()
             {
                 for(m=0; m<n; m++)
                 {
-                    sred_gauss += img_addit.at<uchar>(j+m, i+k)*kernel_gauss.at<float>(m, k);
+                    sred_gauss += img_addit.at<uchar>(j+m, i+k)*kernel_gauss.at<float>(m, k);//свертка
                 }
 
             }
