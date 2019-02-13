@@ -194,34 +194,81 @@ Mat Lines(Mat &img)
 void find_circles()
 {
     Mat img = imread("/home/anastasia/git/Lab_5/2.jpeg", 1);
-    Mat img1 = imread("/home/anastasia/git/Lab_5/2.jpeg", 0);
-   // adaptiveThreshold(img1, img1, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY_INV, 3, 5);
-    threshold(img1, img1, 160, 255, THRESH_BINARY_INV);
-    Mat kernel = getStructuringElement(MORPH_RECT, Size(5, 5));
-    erode(img1, img1, kernel, Point(-1, -1), 1);
-    dilate(img1, img1, kernel, Point(-1, -1), 2);
-    vector <Vec3f> circles;
+    Mat binary = imread("/home/anastasia/git/Lab_5/2.jpeg", 0);
+    Mat binary1 = imread("/home/anastasia/git/Lab_5/2.jpeg", 0);
+    Mat img1 = img.clone(), temp = img.clone();
+    Mat lat, nik, channel[3];
+
+    threshold(binary, binary, 160, 255, THRESH_BINARY_INV);
+    threshold(binary1, binary1, 160, 255, THRESH_BINARY);
+    Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(3, 3));
+
+    erode(binary1, binary1, kernel, Point(-1, -1), 1);
+    dilate(binary1, binary1, kernel, Point(-1, -1), 4);
+
+    dilate(binary, binary, kernel, Point(-1, -1), 1);
+    erode(binary, binary, kernel, Point(-1, -1), 5);
+
+    vector <Vec3f> circle_nick, circle_brass;
 
     if( !img.data )
     {
         cout <<  "Could not open or find the image" << endl;
     }
 
-    HoughCircles(img1, circles, HOUGH_GRADIENT, 3, img1.cols/7);
-
-    for( size_t i = 0; i < circles.size(); i++ )
+    split(img1, channel);
+    for (uint8_t i = 0; i<3; i++)
     {
-        cout<<i+1<<circles[i]<<endl;
-        Vec3i c = circles[i];
+        channel[i] -= binary1;
+    }
+    merge(channel, 3, img1);
+
+    cvtColor(img1, img1, COLOR_BGR2HSV);
+    inRange(img1, Vec3b(20, 175, 80), Vec3b(70, 255, 255), lat);
+  //  inRange(img1, Vec3b(7, 50, 55), Vec3b(19, 200, 255), nik);
+
+    dilate(lat, lat, kernel, Point(-1, -1), 7);
+    erode(lat, lat, kernel, Point(-1, -1), 1);
+
+    nik = binary - lat;
+    erode(nik, nik, kernel, Point(-1, -1), 2);
+    dilate(nik, nik, kernel, Point(-1, -1), 6);
+
+    HoughCircles(lat, circle_brass, HOUGH_GRADIENT, 3, lat.cols/6);
+    for( size_t i = 0; i < circle_brass.size(); i++ )
+    {
+        //cout<<"binary brass"<<i+1<<circle_brass[i]<<endl;
+        Vec3i c = circle_brass[i];
         Point center = Point(c[0], c[1]);
         // circle center
-        circle( img, center, 1, Scalar(0, 0, 255), 3, 8);
+        circle( temp, center, 1, Scalar(0, 0, 255), 3, 8);
         // circle outline
         int radius = c[2];
-        circle( img, center, radius, Scalar(0, 255, 0), 3, 8);
+        circle( temp, center, radius, Scalar(255, 255, 0), 3, 8);
+        putText(temp, "Brass", center, FONT_HERSHEY_SIMPLEX, 0.6, Scalar(201, 27, 228), 2);
     }
+
+    HoughCircles(nik, circle_nick, HOUGH_GRADIENT, 3, lat.cols/6);
+    for( size_t i = 0; i < circle_nick.size(); i++ )
+    {
+        //cout<<"binary nickel"<<i+1<<circle_nick[i]<<endl;
+        Vec3i c = circle_nick[i];
+        Point center = Point(c[0], c[1]);
+        // circle center
+        circle( temp, center, 1, Scalar(0, 0, 255), 3, 8);
+        // circle outline
+        int radius = c[2];
+        circle( temp, center, radius, Scalar(0, 255, 255), 3, 8);
+        putText(temp, "Nickel", center, FONT_HERSHEY_SIMPLEX, 0.6, Scalar(60, 179, 113), 2);
+    }
+
     imshow("Original", img);
-    imshow("Circles", img1);
+/*    imshow("Circles", binary1);
+    imshow("Money", img1);
+    imshow("binary brass", lat);
+    imshow("binary nickel", nik);
+  */  imshow("Materials", temp);
+
     waitKey(0);
     destroyAllWindows();
 }
