@@ -1,10 +1,10 @@
 #include <core/include/opencv2/core.hpp>
 #include <highgui/include/opencv2/highgui.hpp>
-#include <imgproc/include/opencv2/imgproc.hpp>
-#include <imgcodecs/include/opencv2/imgcodecs.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/imgcodecs.hpp>
 #include <video/include/opencv2/video/tracking.hpp>
-#include <objdetect/include/opencv2/objdetect.hpp>
-#include <videoio/include/opencv2/videoio.hpp>
+#include <opencv2/objdetect.hpp>
+#include <opencv2/videoio.hpp>
 #include <iostream>
 #include <cmath>
 #include <math.h>
@@ -19,28 +19,29 @@ Mat Lines(Mat &img);
 void find_circles();
 int process(VideoCapture& capture, bool flag);
 int mount_video(int fps, int width, int height);
+void correct_img(Mat img1, Mat img2);
 
 const string videoname = "/home/anastasia/git/Lab_5/LR6/Video/11.avi";
 static int cadre;
 static Mat bin_img;
+static Mat skelet;
 
 //VideoWriter binary_video;
 
 int main()
 {
-    string img_name = "/home/anastasia/git/Lab_5/3.jpeg";
-    Mat img = imread(img_name, 1);
+    //string img_name = "/home/anastasia/git/Lab_5/3.jpeg";
+    Mat img; // = imread(img_name, 1);
 
-    Mat skelet;
     Mat line_img;
-    int max = 0;
+  //  int max = 0;
     int point;
     Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(3, 3));
-    if( !img.data )
+/*    if( !img.data )
     {
         cout <<  "Could not open or find the image" << endl;
         return -1;
-    }
+    }*/
     VideoCapture capture(videoname, CAP_ANY);
 //    VideoCapture capture_skelet(videoname, CAP_ANY);
     if (!capture.isOpened())
@@ -53,10 +54,6 @@ int main()
     int fps_capture = (int)capture.get(CAP_PROP_FOURCC);
     int width_capture = (int)capture.get(CAP_PROP_FRAME_WIDTH);
     int height_capture = (int)capture.get(CAP_PROP_FRAME_HEIGHT);
-  */  cout
-            //<<"fps capture = "<<fps_capture<<endl
-            <<"[info] cols: "<<img.cols<<" pixels"<<endl
-            <<"[info] rows: "<<img.rows<<" pixels"<<endl;
 
     for (int i=0; i<img.cols; i++)
     {
@@ -67,15 +64,16 @@ int main()
         }
 
     }
-    cvtColor(img, bin_img, COLOR_RGB2GRAY);
-    threshold(bin_img, bin_img, 80, 255, THRESH_BINARY);
- /*   dilate(bin_img, bin_img, kernel, Point(-1, -1), 1);
-    erode(bin_img, bin_img, kernel, Point(-1, -1), 1);
-*/    morphologyEx(bin_img, bin_img, MORPH_OPEN, kernel, Point(-1, -1), 1);
+    */
+//    morphologyEx(bin_img, bin_img, MORPH_OPEN, kernel, Point(-1, -1), 1);
 /*    imshow("Binary", bin_img);
     waitKey(0);
     destroyAllWindows();
-  */  cout
+  */
+    cout
+            //<<"fps capture = "<<fps_capture<<endl
+            <<"[info] cols: "<<img.cols<<" pixels"<<endl
+            <<"[info] rows: "<<img.rows<<" pixels"<<endl
             <<"Please enter number: "<<endl
             <<"1 - Find Skelet and lines;"<<endl
             <<"2 - Find Circles;"<<endl
@@ -88,7 +86,15 @@ int main()
         {
             case '1':
             {
-                imshow("Image", img);
+                img = imread("/home/anastasia/git/Lab_5/002.jpeg", 0);
+ /*               cvtColor(img, bin_img, COLOR_RGB2GRAY);
+                threshold(bin_img, bin_img, 90, 255, THRESH_BINARY);
+                dilate(bin_img, bin_img, kernel, Point(-1, -1), 3);
+                erode(bin_img, bin_img, kernel, Point(-1, -1), 2);
+                dilate(bin_img, bin_img, kernel, Point(-1, -1), 1);
+                erode(bin_img, bin_img, kernel, Point(-1, -1), 1);
+ */               imshow("Image", img);
+                bin_img = img.clone();
                 imshow("Binary", bin_img);
                 waitKey(0);
                 skelet = bin_img.clone();
@@ -109,8 +115,10 @@ int main()
             }
             case '3':
             {
-              //  process(capture, false);
                 cadre = process(capture, true);
+                Mat img_bin = imread("/home/anastasia/git/Lab_5/Binary_video/002.jpeg", 0);
+                img = imread("/home/anastasia/git/Lab_5/002.jpeg", 0);
+                correct_img(img, img_bin);
                 skeletonization(true, cadre);
                 VideoCapture capture_skelet("/home/anastasia/git/Lab_5/Binary_video/%03d.jpeg");//"/home/anastasia/git/Lab_5/Binary_video.avi");
                 if (!capture_skelet.isOpened())
@@ -127,7 +135,7 @@ int main()
     }
     return 0;
 }
-
+/**
 int mount_video(int fps, int width, int height)
 {
 //    Mat img = imread("/home/anastasia/git/Lab_5/Binary_video/000.jpeg", 0);
@@ -162,7 +170,7 @@ int mount_video(int fps, int width, int height)
     destroyAllWindows();
     return 0;
 }
-
+*/
 int process(VideoCapture& capture, bool flag = false)
 {
     //VideoWriter binary_video;
@@ -193,13 +201,25 @@ int process(VideoCapture& capture, bool flag = false)
             cout<<"Frame is empty!"<<endl;
             break;
         }
+  /*      sprintf(filename,"/home/anastasia/git/Lab_5/Original/%03d.jpeg",n++);
+        imwrite(filename,frame);
+    */
         if (flag == true)
         {
             cvtColor(frame, frame, COLOR_RGB2GRAY);
-            threshold(frame, frame, 80, 255, THRESH_BINARY);
-            morphologyEx(frame, frame, MORPH_OPEN, kernel, Point(-1, -1), 1);
+            threshold(frame, frame, 100, 255, THRESH_BINARY);
+            dilate(frame, frame, kernel, Point(-1, -1), 3);
+            erode(frame, frame, kernel, Point(-1, -1), 2);
+            dilate(frame, frame, kernel, Point(-1, -1), 1);
+            erode(frame, frame, kernel, Point(-1, -1), 1);
+            //morphologyEx(frame, frame, MORPH_OPEN, kernel, Point(-1, -1), 1);
             sprintf(filename,"/home/anastasia/git/Lab_5/Binary_video/%03d.jpeg",n++);
             imwrite(filename,frame);
+            if (cadre == 2)
+                    {
+                        sprintf(filename,"/home/anastasia/git/Lab_5/002.jpeg");
+                        imwrite(filename,frame);
+                    }
             //binary_video<<frame;
         }
         imshow(window_name, frame);
@@ -241,7 +261,7 @@ int skeletonization(bool Flag, int cadre)
     Mat img1, img2;
     if (Flag == false)
     {
-        img1 = imread("/home/anastasia/git/Lab_5/000.jpeg", 0);//capture.clone();bin_img.clone();//
+        img1 = skelet.clone();//imread("/home/anastasia/git/Lab_5/000.jpeg", 0);//capture.clone();bin_img.clone();//
         img2 = img1.clone();
         cadre = 1;
     }
@@ -297,14 +317,14 @@ int skeletonization(bool Flag, int cadre)
                     if (B>=3 && B<=7) //кол-во белых пикселей по соседству
                         point++;
                     else continue;
-                    grad[0] = P[0][0]*!P[0][1]; //9->2
-                    grad[1] = P[0][1]*!P[0][2]; //2->3
-                    grad[2] = P[0][2]*!P[1][2]; //3->4
-                    grad[3] = P[1][2]*!P[2][2]; //4->5
-                    grad[4] = P[2][2]*!P[2][1]; //5->6
-                    grad[5] = P[2][1]*!P[2][0]; //6->7
-                    grad[6] = P[2][0]*!P[1][0]; //7->8
-                    grad[7] = P[1][0]*!P[0][0]; //8->9
+                    grad[0] = !P[0][1]*P[0][2]; //2<-3
+                    grad[1] = !P[0][2]*P[1][2]; //3<-4
+                    grad[2] = !P[1][2]*P[2][2]; //4<-5
+                    grad[3] = !P[2][2]*P[2][1]; //5<-6
+                    grad[4] = !P[2][1]*P[2][0]; //6<-7
+                    grad[5] = !P[2][0]*P[1][0]; //7<-8
+                    grad[6] = !P[1][0]*P[0][0]; //8<-9
+                    grad[7] = !P[0][0]*P[0][1]; //9<-2
                     for (uint8_t p=0; p<8; p++)
                     {
                         if (grad[p] >= 100)
@@ -370,6 +390,7 @@ int skeletonization(bool Flag, int cadre)
             imshow("Skelet", img1);
             waitKey(0);
         }
+        waitKey(1);
     }
 //    capture = img2.clone();
 //    imshow("Skelet",capture);
@@ -487,4 +508,22 @@ void find_circles()
 
     waitKey(0);
     destroyAllWindows();
+}
+
+void correct_img(Mat img1, Mat img2)
+{
+    u_char img_1 = 0, img_2 = 0;
+    int Overlap = 0;
+    for(int i=0; i<img2.cols; i++)
+    {
+        for(int j=0; j<img2.rows; j++)
+        {
+            img_1 = img1.at<uchar>(j,i);
+            img_2 = img2.at<uchar>(j,i);
+            int value = (img_1 - img_2);
+            if(abs(value)<2)
+                Overlap++;
+        }
+    }
+    cout<<"Correctness of images = "<<Overlap*100/(img1.cols*img1.rows)<<" %"<<endl;
 }
