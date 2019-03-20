@@ -69,8 +69,10 @@ static bool readDetectorParameters(string filename, Ptr<aruco::DetectorParameter
     return true;
 }
 */
-int main(int argc, char *argv[])
+int main()
 {
+    const char *const argv[] = {"", "-d=7", "-c", "-l=0.04", "-r"};
+    int argc = sizeof (&argv);
     CommandLineParser parser(argc, argv, keys);
     parser.about(about);
 

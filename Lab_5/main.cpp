@@ -15,63 +15,36 @@ using namespace cv;
 using namespace std;
 
 int skeletonization(bool Flag, int cadre);
-Mat Lines(Mat &img);
+int Lines(Mat &img, bool flag);
 void find_circles();
 int process(VideoCapture& capture, bool flag);
-int mount_video(int fps, int width, int height);
-void correct_img(Mat img1, Mat img2);
+void correct_img(Mat& img1, Mat& img2);
+Mat morphs_frame(Mat& img);
+
 
 const string videoname = "/home/anastasia/git/Lab_5/LR6/Video/11.avi";
 static int cadre;
 static Mat bin_img;
 static Mat skelet;
 
-//VideoWriter binary_video;
-
 int main()
 {
-    //string img_name = "/home/anastasia/git/Lab_5/3.jpeg";
-    Mat img; // = imread(img_name, 1);
-
+    Mat img;
     Mat line_img;
-  //  int max = 0;
     int point;
-    Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(3, 3));
 /*    if( !img.data )
     {
         cout <<  "Could not open or find the image" << endl;
         return -1;
     }*/
     VideoCapture capture(videoname, CAP_ANY);
-//    VideoCapture capture_skelet(videoname, CAP_ANY);
-    if (!capture.isOpened())
+ /*   if (!capture.isOpened())
     {
         cout << "Failed to open the video device, video file or image sequence!" << endl;
         return -1;
     }
-/*    cadre = process(capture, true);
-    destroyAllWindows( );
-    int fps_capture = (int)capture.get(CAP_PROP_FOURCC);
-    int width_capture = (int)capture.get(CAP_PROP_FRAME_WIDTH);
-    int height_capture = (int)capture.get(CAP_PROP_FRAME_HEIGHT);
-
-    for (int i=0; i<img.cols; i++)
-    {
-        for (int j=0; j<img.rows; j++)
-        {
-             if(img.at<uchar>(j, i)>max)
-                 max = img.at<uchar>(j, i);
-        }
-
-    }
-    */
-//    morphologyEx(bin_img, bin_img, MORPH_OPEN, kernel, Point(-1, -1), 1);
-/*    imshow("Binary", bin_img);
-    waitKey(0);
-    destroyAllWindows();
-  */
+    process(capture, false);*/
     cout
-            //<<"fps capture = "<<fps_capture<<endl
             <<"[info] cols: "<<img.cols<<" pixels"<<endl
             <<"[info] rows: "<<img.rows<<" pixels"<<endl
             <<"Please enter number: "<<endl
@@ -86,23 +59,20 @@ int main()
         {
             case '1':
             {
-                img = imread("/home/anastasia/git/Lab_5/002.jpeg", 0);
- /*               cvtColor(img, bin_img, COLOR_RGB2GRAY);
-                threshold(bin_img, bin_img, 90, 255, THRESH_BINARY);
-                dilate(bin_img, bin_img, kernel, Point(-1, -1), 3);
-                erode(bin_img, bin_img, kernel, Point(-1, -1), 2);
-                dilate(bin_img, bin_img, kernel, Point(-1, -1), 1);
-                erode(bin_img, bin_img, kernel, Point(-1, -1), 1);
- */               imshow("Image", img);
-                bin_img = img.clone();
-                imshow("Binary", bin_img);
+                bin_img = imread("/home/anastasia/git/Lab_5/002.jpeg", 0);//skelet.jpg
+                img = imread("/home/anastasia/git/Lab_5/color.jpeg", 1);
+                threshold(bin_img, bin_img, 100, 255, THRESH_BINARY);
+                morphs_frame(bin_img);
+                imshow("Image", img);
+                imshow("Binary image", bin_img);
                 waitKey(0);
                 skelet = bin_img.clone();
                 skeletonization(false, cadre);
-             /*   line_img = skelet.clone();
-                Lines(line_img);
-              //  imshow("Skelet",skelet);
-              //  imshow("Lines", line_img);*/
+                line_img = skelet.clone();
+                Lines(line_img, false);
+          //      morphs_frame(line_img);
+                imshow("Skelet", skelet);
+                imshow("Lines", line_img);
                 waitKey(0);
                 destroyAllWindows( );
                 break;
@@ -120,7 +90,7 @@ int main()
                 img = imread("/home/anastasia/git/Lab_5/002.jpeg", 0);
                 correct_img(img, img_bin);
                 skeletonization(true, cadre);
-                VideoCapture capture_skelet("/home/anastasia/git/Lab_5/Binary_video/%03d.jpeg");//"/home/anastasia/git/Lab_5/Binary_video.avi");
+                VideoCapture capture_skelet("/home/anastasia/git/Lab_5/line/%03d.jpeg");//"/home/anastasia/git/Lab_5/line/%03d.jpeg");
                 if (!capture_skelet.isOpened())
                 {
                     cout << "Failed to open the video device, video file or image sequence!" << endl;
@@ -135,58 +105,11 @@ int main()
     }
     return 0;
 }
-/**
-int mount_video(int fps, int width, int height)
-{
-//    Mat img = imread("/home/anastasia/git/Lab_5/Binary_video/000.jpeg", 0);
-    VideoCapture capture("/home/anastasia/git/Lab_5/Binary_video/%03d.jpeg");
-    int codec = VideoWriter::fourcc('M','J','P','G');//('P','I','M','1');
-//    int codec = 0;
-//    width = img.cols;
-//    height = img.rows;
-    VideoWriter binary_video("/home/anastasia/git/Lab_5/Binary_video.avi", codec, fps,
-                      Size(width, height));
-    if (!binary_video.isOpened())
-    {
-        cout << "Failed to open the video to write!" << endl;
-        return -1;
-    }
-    Mat frame;
-    int n = 0;
-    for (;;)
-    {
-        capture >> frame;
-        if (frame.empty())
-        {
-            cout<<"Frame is empty!"<<endl;
-            break;
-        }
-        binary_video<<frame;
-        n++;
-    }
-    cout<<"n = "<<n<<endl;
-    capture.release();
-    binary_video.release();
-    destroyAllWindows();
-    return 0;
-}
-*/
+
 int process(VideoCapture& capture, bool flag = false)
 {
-    //VideoWriter binary_video;
-    //if (flag == true)
-    //{
-/*        int codec = VideoWriter::fourcc('M','J','P','G');//('P','I','M','1');
-        //int codec = 0;
-        VideoWriter binary_video("/home/anastasia/git/Lab_5/Binary_video.avi", codec, (int)capture.get(CAP_PROP_FOURCC),
-                          Size((int)capture.get(CAP_PROP_FRAME_WIDTH), (int)capture.get(CAP_PROP_FRAME_HEIGHT)), true);
-        if (!binary_video.isOpened())
-        {
-            cout << "Failed to open the video to write!" << endl;
-            return -1;
-        }*/
-   // }
-    Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(3, 3));
+    Mat kernel1 = getStructuringElement(MORPH_ELLIPSE, Size(5, 5));
+    Mat kernel2 = getStructuringElement(MORPH_ELLIPSE, Size(3, 3));
     int n = 0, m = 0, cadre = 0;
     char filename[200];
     string window_name = "Video | q or esc to quit";
@@ -201,24 +124,21 @@ int process(VideoCapture& capture, bool flag = false)
             cout<<"Frame is empty!"<<endl;
             break;
         }
-  /*      sprintf(filename,"/home/anastasia/git/Lab_5/Original/%03d.jpeg",n++);
-        imwrite(filename,frame);
-    */
         if (flag == true)
         {
+            sprintf(filename,"/home/anastasia/git/Lab_5/original/%03d.jpeg",n);
+            imwrite(filename, frame);
+            imshow("Original video", frame);
             cvtColor(frame, frame, COLOR_RGB2GRAY);
             threshold(frame, frame, 100, 255, THRESH_BINARY);
-            dilate(frame, frame, kernel, Point(-1, -1), 3);
-            erode(frame, frame, kernel, Point(-1, -1), 2);
-            dilate(frame, frame, kernel, Point(-1, -1), 1);
-            erode(frame, frame, kernel, Point(-1, -1), 1);
+            morphs_frame(frame);
             //morphologyEx(frame, frame, MORPH_OPEN, kernel, Point(-1, -1), 1);
             sprintf(filename,"/home/anastasia/git/Lab_5/Binary_video/%03d.jpeg",n++);
-            imwrite(filename,frame);
+            imwrite(filename, frame);
             if (cadre == 2)
                     {
                         sprintf(filename,"/home/anastasia/git/Lab_5/002.jpeg");
-                        imwrite(filename,frame);
+                        imwrite(filename, frame);
                     }
             //binary_video<<frame;
         }
@@ -250,14 +170,6 @@ int process(VideoCapture& capture, bool flag = false)
 
 int skeletonization(bool Flag, int cadre)
 {
-    /*int codec = VideoWriter::fourcc('M','J','P','G');//
-    VideoWriter binary_video("/home/anastasia/git/Lab_5/Skelet_video.avi", codec, (int)capture.get(CAP_PROP_FPS),
-                      Size((int)capture.get(CAP_PROP_FRAME_WIDTH), (int)capture.get(CAP_PROP_FRAME_HEIGHT)), true);
-    if (!binary_video.isOpened())
-    {
-        cout << "Failed to open the video to write!" << endl;
-        return -1;
-    }*/
     Mat img1, img2;
     if (Flag == false)
     {
@@ -265,19 +177,15 @@ int skeletonization(bool Flag, int cadre)
         img2 = img1.clone();
         cadre = 1;
     }
-//    VideoCapture capture_skelet("/home/anastasia/git/Lab_5/Binary_video/%03d.jpeg");
     uint8_t point = 0;
     uint8_t step = 1;
     int16_t P[3][3];
     uint8_t A = 0, B = 0;
     int16_t grad[8];
-    uint q1 = 0;// q2 = 0;
-
+    uint q1 = 0;
     char filename[200];
     char open_file[200];
-//    int m = 0;
     Mat deletet;
-    //char key[20];
     for (int i = 0; i<cadre; i++)
     {
         bool flag = true;
@@ -285,24 +193,22 @@ int skeletonization(bool Flag, int cadre)
         {
             sprintf(open_file, "/home/anastasia/git/Lab_5/Binary_video/%03d.jpeg", i);
             img1 = imread(open_file, 0);
+            threshold(img1, img1, 100, 255, THRESH_BINARY);
             img2 = img1.clone();
-//            capture >> img1;
-//            capture >> img2;
-            //img2 = img1.clone();
         }
         if (img1.empty())
             break;
         while (flag == true)//make skelet
         {
             deletet = Mat::ones(img1.rows, img1.cols, img1.type());
-            for (int i=0; i<img1.rows; i++)
+            for (int i=0; i<img1.rows-2; i++)
             {
-                for (int j=0; j<img1.cols; j++)
+                for (int j=0; j<img1.cols-2; j++)
                 {
                     A = 0;
                     B = 0;
                     point = 0;
-                    if (img1.at<uchar>(i+1, j+1) >= 100) //пиксель белый
+                    if (img1.at<uchar>(i+1, j+1) != 0) //пиксель белый
                         point++;
                     else continue;
                     for (uint8_t k=0; k<3; k++)
@@ -310,27 +216,27 @@ int skeletonization(bool Flag, int cadre)
                         for (uint8_t m=0; m<3; m++)
                         {
                             P[k][m] = img1.at<uchar>(i+k, j+m);
-                            if (P[k][m] >= 100) //img1.at<uchar>(i+k, j+m)
+                            if (P[k][m] != 0) //img1.at<uchar>(i+k, j+m)
                                 B++;
                         }
                     }
                     if (B>=3 && B<=7) //кол-во белых пикселей по соседству
                         point++;
                     else continue;
-                    grad[0] = !P[0][1]*P[0][2]; //2<-3
-                    grad[1] = !P[0][2]*P[1][2]; //3<-4
-                    grad[2] = !P[1][2]*P[2][2]; //4<-5
-                    grad[3] = !P[2][2]*P[2][1]; //5<-6
-                    grad[4] = !P[2][1]*P[2][0]; //6<-7
-                    grad[5] = !P[2][0]*P[1][0]; //7<-8
-                    grad[6] = !P[1][0]*P[0][0]; //8<-9
-                    grad[7] = !P[0][0]*P[0][1]; //9<-2
+                    grad[0] = P[0][1]*!P[0][2]; //2<-3
+                    grad[1] = P[0][2]*!P[1][2]; //3<-4
+                    grad[2] = P[1][2]*!P[2][2]; //4<-5
+                    grad[3] = P[2][2]*!P[2][1]; //5<-6
+                    grad[4] = P[2][1]*!P[2][0]; //6<-7
+                    grad[5] = P[2][0]*!P[1][0]; //7<-8
+                    grad[6] = P[1][0]*!P[0][0]; //8<-9
+                    grad[7] = P[0][0]*!P[0][1]; //9<-2
                     for (uint8_t p=0; p<8; p++)
                     {
-                        if (grad[p] >= 100)
+                        if (grad[p] != 0)
                             A++;
                     }
-                    if (A == 1) //переход от черного к белому
+                    if (A < 2) //переход от черного к белому
                         point++;
                     else continue;
                     switch (step)
@@ -339,21 +245,27 @@ int skeletonization(bool Flag, int cadre)
                         if (P[0][1]*P[1][2]*P[2][1] == 0 && P[1][2]*P[2][1]*P[1][0] == 0)
                         {
                             point++;
-                            step = 2;
+                            //step = 2;
                         }
                         break;
                         case (2):
                         if (P[0][1]*P[1][2]*P[1][0] == 0 && P[0][1]*P[2][1]*P[1][0] == 0)
                         {
                             point++;
-                            step = 1;
+                          //  step = 1;
                         }
                         break;
                     }
                     if (point == 4)
                         deletet.at<uchar>(i+1, j+1) = 0;
-                }
+                  /*  imshow("Deleted", deletet*255);
+                    waitKey(20);
+                */}
             }
+            if(step == 1)
+                step = 2;
+            else
+                step = 1;
             q1 = 0;
             for (int i=0; i<deletet.rows; i++)
             {
@@ -366,66 +278,51 @@ int skeletonization(bool Flag, int cadre)
             }
             if (q1 == 0)
                 flag = false;
-//            else
-//                filter2D(img1, img2, -1, deletet, Point(-1, -1));
-/*                for (int i=0; i<deletet.rows; i++)
-                {
-                    for (int j=0; j<deletet.cols; j++)
-                    {
-                        img2.at<uchar>(i, j) = img1.at<uchar>(i, j) * deletet.at<uchar>(i, j); //img2.clone();
-                    }
-                }
-*/            //q2 = q1;
             img1 = img2;
-        }
+    /*        imshow("Skelet", img1);
+            waitKey(30);
+      */  }
         if (Flag == true)
         {
             sprintf(filename, "/home/anastasia/git/Lab_5/Binary_video/%03d.jpeg", i);
+            imwrite(filename, img1);
+            Lines(img1, true);
+            sprintf(filename, "/home/anastasia/git/Lab_5/line/%03d.jpeg", i);
             imwrite(filename, img1);
         }
         else
         {
             sprintf(filename, "/home/anastasia/git/Lab_5/skelet.jpeg");
             imwrite(filename, img1);
-            imshow("Skelet", img1);
-            waitKey(0);
+            skelet = img1;
         }
-        waitKey(1);
     }
-//    capture = img2.clone();
-//    imshow("Skelet",capture);
-
     return 0;
 }
 
-Mat Lines(Mat &img)
+int Lines(Mat &img, bool flag)
 {
+    static int n = 0;
+    char open_file[200];
     size_t i = 0;
-    Mat line_image = Mat::ones(img.rows, img.cols, 0);
     vector <Vec4i> lines;
-    HoughLinesP(img, lines, 1, CV_PI / 180, 4, 0, 30);
-    vector <Vec2i> point_lines;
+    HoughLinesP(img, lines, 1, CV_PI/180, 18, 0, 120);
+    if (flag == false)
+        img = imread("/home/anastasia/git/Lab_5/color.jpeg", 1);//Mat::zeros(img.rows, img.cols, img.type());
+    else
+    {
+        sprintf(open_file, "/home/anastasia/git/Lab_5/original/%03d.jpeg", n++);
+        img = imread(open_file, 1);
+    }
+    if (img.empty())
+        return -1;
     for ( i = 0; i < lines.size(); i++)
     {
-
         Vec4i l = lines[i];
-        line(line_image, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(255), 3, 5);
-       /* cout<<"Point "<<i<<endl;
-        int x = lines[i][0];
-        int y = lines[i][1];
-        Point p_l = Point(x, y);
-        //point_lines[i] = p_l;
-        point_lines[i].x = p_l.x;
-        point_lines[i].y = p_l.y;
-    */}
-    //const Point *pts = (const Point*) Mat(lines).data;
-//    int npts = Mat(lines).rows;
- //   cout<<"size point lines = "<<npts<<endl;
-//   polylines(line_image, &pts, &npts, 1, false, Scalar(255), 3, 5);
-    imshow("Lines", line_image);
-    waitKey(0);
-    destroyAllWindows();
-    return line_image;
+        line(img, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(255, 0, 255), 4, 5);
+    }
+    cout<<"lines.size() = "<<lines.size()<<endl;
+    return 0;
 }
 
 void find_circles()
@@ -510,7 +407,20 @@ void find_circles()
     destroyAllWindows();
 }
 
-void correct_img(Mat img1, Mat img2)
+Mat morphs_frame(Mat& img)
+{
+    Mat kernel1 = getStructuringElement(MORPH_ELLIPSE, Size(5, 5));
+    Mat kernel2 = getStructuringElement(MORPH_ELLIPSE, Size(3, 3));
+    dilate(img, img, kernel2, Point(-1, -1), 2);
+    erode(img, img, kernel2, Point(-1, -1), 2);
+    dilate(img, img, kernel1, Point(-1, -1), 1);
+    erode(img, img, kernel1, Point(-1, -1), 1);
+    dilate(img, img, kernel1, Point(-1, -1), 1);
+    erode(img, img, kernel1, Point(-1, -1), 1);
+    return img;
+}
+
+void correct_img(Mat &img1, Mat &img2)
 {
     u_char img_1 = 0, img_2 = 0;
     int Overlap = 0;
