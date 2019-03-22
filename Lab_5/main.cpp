@@ -321,7 +321,7 @@ int Lines(Mat &img, bool flag)
         Vec4i l = lines[i];
         line(img, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(255, 0, 255), 4, 5);
     }
-    cout<<"lines.size() = "<<lines.size()<<endl;
+   // cout<<"lines.size() = "<<lines.size()<<endl;
     return 0;
 }
 

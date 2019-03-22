@@ -32,7 +32,7 @@ const char* keys  =
         "CORNER_REFINE_CONTOUR=2, CORNER_REFINE_APRILTAG=3}";
 }
 
-/**
+/*
 static bool readCameraParameters(string filename, Mat &camMatrix, Mat &distCoeffs) {
     FileStorage fs(filename, FileStorage::READ);
     if(!fs.isOpened())
@@ -116,7 +116,7 @@ int main()
        Mat frame;
        cap >> frame; // get a new frame from camera
        image = frame.clone();
-       cvtColor(image, edges, COLOR_BGR2GRAY);
+   //    cvtColor(image, edges, COLOR_BGR2GRAY);
 
        // detect markers and estimate pose
        aruco::detectMarkers(image, dictionary, corners, ids, detectorParams, rejected);
