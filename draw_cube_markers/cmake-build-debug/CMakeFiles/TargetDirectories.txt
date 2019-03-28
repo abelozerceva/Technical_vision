@@ -1,0 +1,3 @@
+/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles/markers.dir
+/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles/edit_cache.dir

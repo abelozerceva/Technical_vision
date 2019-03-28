@@ -1,0 +1,3 @@
+/home/anastasia/git/build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/rebuild_cache.dir
+/home/anastasia/git/build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/calibrate.dir
+/home/anastasia/git/build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/edit_cache.dir
