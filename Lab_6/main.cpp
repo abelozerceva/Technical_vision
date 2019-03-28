@@ -71,7 +71,7 @@ static bool readDetectorParameters(string filename, Ptr<aruco::DetectorParameter
 */
 int main()
 {
-    const char *const argv[] = {"", "-d=7", "-c", "-l=0.04", "-r"};
+    const char *const argv[] = {"", "-d=10", "-c", "-l=0.04", "-r"};
     int argc = sizeof (&argv);
     CommandLineParser parser(argc, argv, keys);
     parser.about(about);
@@ -85,7 +85,6 @@ int main()
     if(!cap.isOpened())  // check if we succeeded
        return -1;
     Mat edges;
-    namedWindow("edges",1);
 
     Mat camMatrix, distCoeffs;
     double totalTime = 0;
@@ -103,7 +102,7 @@ int main()
     Ptr<aruco::DetectorParameters> detectorParams = aruco::DetectorParameters::create();
 
     Ptr<aruco::Dictionary> dictionary =
-        aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(dictionaryId));
+        aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(dictionaryId));//aruco::DICT_5X5_1000);
 
     if (parser.has("refine"))
     {
@@ -116,7 +115,6 @@ int main()
        Mat frame;
        cap >> frame; // get a new frame from camera
        image = frame.clone();
-   //    cvtColor(image, edges, COLOR_BGR2GRAY);
 
        // detect markers and estimate pose
        aruco::detectMarkers(image, dictionary, corners, ids, detectorParams, rejected);
@@ -150,8 +148,6 @@ int main()
            aruco::drawDetectedMarkers(imageCopy, rejected, noArray(), Scalar(100, 0, 255));
 
        imshow("Output", imageCopy);
-       //imshow("Original", frame);
-       //imshow("Gray", edges);
        if(waitKey(30) >= 0) break;
 
     }

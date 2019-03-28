@@ -18,8 +18,12 @@ using namespace cv;
 
 int main()
 {
-    const char  *const argv[] = {"", "-d=7", "-c", "-l=0.04", "-r", "-v", "-ci", "-dp", "-refine"};
-    int argc = sizeof (&argv);
-    detect_markers(argc, argv);
+    const char  *const argv1[] = {"", "-@outfile=calibration.xml", "-w=5", "-h=7", "-s=0.01", "-d=7", "-l=0.04", "-rs=false",
+                                  "-v", "-ci=0", "-dp", "-zt=false", "-a", "-pc=false"};
+    int argc1 = sizeof (&argv1);
+    const char  *const argv2[] = {"", "-d=10", "-c", "-l=0.04", "-r", "-v", "-ci", "-dp", "-refine"};
+    int argc2 = sizeof (&argv2);
+    //calibrate_camera(argc1, argv1);
+    detect_markers(argc2, argv2);
     return 0;
 }
