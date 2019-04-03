@@ -1,4 +1,4 @@
-# Install script for directory: /home/anastasia/CLionProjects/markers
+# Install script for directory: /home/anastasia/git/draw_cube_markers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/anastasia/CLionProjects/markers/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/anastasia/git/draw_cube_markers/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

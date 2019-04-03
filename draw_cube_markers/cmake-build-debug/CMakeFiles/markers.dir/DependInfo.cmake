@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anastasia/CLionProjects/markers/libs/detect_markers.cpp" "/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles/markers.dir/libs/detect_markers.cpp.o"
-  "/home/anastasia/CLionProjects/markers/libs/draw_cube.cpp" "/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles/markers.dir/libs/draw_cube.cpp.o"
-  "/home/anastasia/CLionProjects/markers/main.cpp" "/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles/markers.dir/main.cpp.o"
+  "/home/anastasia/git/draw_cube_markers/libs/detect_markers.cpp" "/home/anastasia/git/draw_cube_markers/cmake-build-debug/CMakeFiles/markers.dir/libs/detect_markers.cpp.o"
+  "/home/anastasia/git/draw_cube_markers/libs/draw_cube.cpp" "/home/anastasia/git/draw_cube_markers/cmake-build-debug/CMakeFiles/markers.dir/libs/draw_cube.cpp.o"
+  "/home/anastasia/git/draw_cube_markers/main.cpp" "/home/anastasia/git/draw_cube_markers/cmake-build-debug/CMakeFiles/markers.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

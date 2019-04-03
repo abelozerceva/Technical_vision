@@ -89,17 +89,17 @@ int detect_markers(int argc, const char *const *argv)
     Ptr<aruco::DetectorParameters> detectorParams = aruco::DetectorParameters::create();
 
     Ptr<aruco::Dictionary> dictionary =
-            aruco::getPredefinedDictionary(aruco::DICT_6X6_250);//aruco::PREDEFINED_DICTIONARY_NAME(dictionaryId));
+            aruco::getPredefinedDictionary(aruco::DICT_6X6_100);//aruco::PREDEFINED_DICTIONARY_NAME(dictionaryId));
 /*
     [1.019099074177694320e+03,0.000000000000000000e+00,6.557727729771451095e+02
     0.000000000000000000e+00,1.011927236550148677e+03,3.816077913964442700e+02
     0.000000000000000000e+00,0.000000000000000000e+00,1.000000000000000000e+00];
 */
     camMatrix = Mat::zeros(3, 3, 6);
-    int fx = 200;
-    int fy = 200;
-    int cx = 600;
-    int cy = 300;
+    int fx = 100;
+    int fy = 100;
+    int cx = 640/2;
+    int cy = 480/2;
     camMatrix.at<double>(0, 0) = fx;
     camMatrix.at<double>(1, 1) = fy;
     camMatrix.at<double>(0, 2) = cx;
@@ -130,16 +130,17 @@ int detect_markers(int argc, const char *const *argv)
         cap >> frame; // get a new frame from camera
         image = frame.clone();
         //    cvtColor(image, edges, COLOR_BGR2GRAY);
-
+/*        cout
+                <<"frame.rows = "<<frame.rows<<endl
+                <<"frame.cols = "<<frame.cols<<endl;
+*/
         // detect markers and estimate pose
         aruco::detectMarkers(image, dictionary, corners, ids, detectorParams, rejected);
         if(estimatePose && ids.size() > 0)
         {
             aruco::estimatePoseSingleMarkers(corners, markerLength, camMatrix, distCoeffs, rvecs,
                                              tvecs);
-            //cout<<"rvecs[0] = "<<rvecs[0]<<endl;
-            //cout<<"rvecs[0][1] = "<<rvecs[0][1]<<endl;
-            //draw_cube(image, corners, rvecs, tvecs);
+            //image = draw_cube(image, rvecs, tvecs);
         }
         double currentTime = ((double)getTickCount() - tick) / getTickFrequency();
         totalTime += currentTime;
@@ -150,15 +151,21 @@ int detect_markers(int argc, const char *const *argv)
                  << "(Mean = " << 1000 * totalTime / double(totalIterations) << " ms)" << endl;
         }
 
+        cout<<"corners.size() = "<<corners.size()<<endl;
         // draw results
         image.copyTo(imageCopy);
         if(ids.size() > 0)
         {
-            aruco::drawDetectedMarkers(imageCopy, corners, ids);
+            aruco::drawDetectedMarkers(image, corners, ids);
+            for(int i = 0; i < corners.size(); i++)
+            {
+                image = draw_cube(image, corners[i], rvecs, tvecs);
+            }
 
-            if(estimatePose) {
+            if(estimatePose)
+            {
                 for(unsigned int i = 0; i < ids.size(); i++)
-                    aruco::drawAxis(imageCopy, camMatrix, distCoeffs, rvecs[i], tvecs[i],
+                    aruco::drawAxis(image, camMatrix, distCoeffs, rvecs[i], tvecs[i],
                                     markerLength * 0.5f);
             }
         }
@@ -166,7 +173,7 @@ int detect_markers(int argc, const char *const *argv)
         if(showRejected && rejected.size() > 0)
             aruco::drawDetectedMarkers(imageCopy, rejected, noArray(), Scalar(100, 0, 255));
 
-        imshow("Output", imageCopy);
+        imshow("Output", image);
         if(waitKey(30) >= 0) break;
 
     }

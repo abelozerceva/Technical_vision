@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/anastasia/CLionProjects/markers/libs/detect_markers.cpp
+/home/anastasia/git/draw_cube_markers/libs/detect_markers.cpp
 opencv2/highgui.hpp
 -
 opencv2/aruco.hpp
@@ -14,9 +14,9 @@ opencv2/aruco.hpp
 iostream
 -
 samples.hpp
-/home/anastasia/CLionProjects/markers/libs/samples.hpp
+/home/anastasia/git/draw_cube_markers/libs/samples.hpp
 
-/home/anastasia/CLionProjects/markers/libs/samples.hpp
+/home/anastasia/git/draw_cube_markers/libs/samples.hpp
 opencv2/highgui.hpp
 -
 opencv2/aruco.hpp

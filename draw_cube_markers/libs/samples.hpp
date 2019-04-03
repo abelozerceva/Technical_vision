@@ -51,3 +51,5 @@ static bool readDetectorParameters(string filename, Ptr<aruco::DetectorParameter
 static bool saveCameraParams(const string &filename, Size imageSize, float aspectRatio, int flags,
                              const Mat &cameraMatrix, const Mat &distCoeffs, double totalAvgErr);
 int calibrate_camera(int argc, const char *const argv[]);
+
+Mat draw_cube(Mat img, vector<cv::Point2f> corners, vector<Vec3d> rvec, vector<Vec3d> tvec);

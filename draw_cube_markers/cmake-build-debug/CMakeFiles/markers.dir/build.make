@@ -43,10 +43,10 @@ RM = /home/anastasia/Загрузки/Установщики/CLion-2018.3.4/clio
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anastasia/CLionProjects/markers
+CMAKE_SOURCE_DIR = /home/anastasia/git/draw_cube_markers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anastasia/CLionProjects/markers/cmake-build-debug
+CMAKE_BINARY_DIR = /home/anastasia/git/draw_cube_markers/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/markers.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/markers.dir/flags.make
 
 CMakeFiles/markers.dir/main.cpp.o: CMakeFiles/markers.dir/flags.make
 CMakeFiles/markers.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/markers.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/markers.dir/main.cpp.o -c /home/anastasia/CLionProjects/markers/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/git/draw_cube_markers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/markers.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/markers.dir/main.cpp.o -c /home/anastasia/git/draw_cube_markers/main.cpp
 
 CMakeFiles/markers.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/markers.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/CLionProjects/markers/main.cpp > CMakeFiles/markers.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/git/draw_cube_markers/main.cpp > CMakeFiles/markers.dir/main.cpp.i
 
 CMakeFiles/markers.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/markers.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/CLionProjects/markers/main.cpp -o CMakeFiles/markers.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/git/draw_cube_markers/main.cpp -o CMakeFiles/markers.dir/main.cpp.s
 
 CMakeFiles/markers.dir/libs/detect_markers.cpp.o: CMakeFiles/markers.dir/flags.make
 CMakeFiles/markers.dir/libs/detect_markers.cpp.o: ../libs/detect_markers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/markers.dir/libs/detect_markers.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/markers.dir/libs/detect_markers.cpp.o -c /home/anastasia/CLionProjects/markers/libs/detect_markers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/git/draw_cube_markers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/markers.dir/libs/detect_markers.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/markers.dir/libs/detect_markers.cpp.o -c /home/anastasia/git/draw_cube_markers/libs/detect_markers.cpp
 
 CMakeFiles/markers.dir/libs/detect_markers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/markers.dir/libs/detect_markers.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/CLionProjects/markers/libs/detect_markers.cpp > CMakeFiles/markers.dir/libs/detect_markers.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/git/draw_cube_markers/libs/detect_markers.cpp > CMakeFiles/markers.dir/libs/detect_markers.cpp.i
 
 CMakeFiles/markers.dir/libs/detect_markers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/markers.dir/libs/detect_markers.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/CLionProjects/markers/libs/detect_markers.cpp -o CMakeFiles/markers.dir/libs/detect_markers.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/git/draw_cube_markers/libs/detect_markers.cpp -o CMakeFiles/markers.dir/libs/detect_markers.cpp.s
 
 CMakeFiles/markers.dir/libs/draw_cube.cpp.o: CMakeFiles/markers.dir/flags.make
 CMakeFiles/markers.dir/libs/draw_cube.cpp.o: ../libs/draw_cube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/markers.dir/libs/draw_cube.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/markers.dir/libs/draw_cube.cpp.o -c /home/anastasia/CLionProjects/markers/libs/draw_cube.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anastasia/git/draw_cube_markers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/markers.dir/libs/draw_cube.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/markers.dir/libs/draw_cube.cpp.o -c /home/anastasia/git/draw_cube_markers/libs/draw_cube.cpp
 
 CMakeFiles/markers.dir/libs/draw_cube.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/markers.dir/libs/draw_cube.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/CLionProjects/markers/libs/draw_cube.cpp > CMakeFiles/markers.dir/libs/draw_cube.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anastasia/git/draw_cube_markers/libs/draw_cube.cpp > CMakeFiles/markers.dir/libs/draw_cube.cpp.i
 
 CMakeFiles/markers.dir/libs/draw_cube.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/markers.dir/libs/draw_cube.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/CLionProjects/markers/libs/draw_cube.cpp -o CMakeFiles/markers.dir/libs/draw_cube.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anastasia/git/draw_cube_markers/libs/draw_cube.cpp -o CMakeFiles/markers.dir/libs/draw_cube.cpp.s
 
 # Object files for target markers
 markers_OBJECTS = \
@@ -156,7 +156,7 @@ markers: /usr/local/lib/libopencv_photo.so.4.0.1
 markers: /usr/local/lib/libopencv_imgproc.so.4.0.1
 markers: /usr/local/lib/libopencv_core.so.4.0.1
 markers: CMakeFiles/markers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable markers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anastasia/git/draw_cube_markers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable markers"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/markers.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -169,6 +169,6 @@ CMakeFiles/markers.dir/clean:
 .PHONY : CMakeFiles/markers.dir/clean
 
 CMakeFiles/markers.dir/depend:
-	cd /home/anastasia/CLionProjects/markers/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/CLionProjects/markers /home/anastasia/CLionProjects/markers /home/anastasia/CLionProjects/markers/cmake-build-debug /home/anastasia/CLionProjects/markers/cmake-build-debug /home/anastasia/CLionProjects/markers/cmake-build-debug/CMakeFiles/markers.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anastasia/git/draw_cube_markers/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anastasia/git/draw_cube_markers /home/anastasia/git/draw_cube_markers /home/anastasia/git/draw_cube_markers/cmake-build-debug /home/anastasia/git/draw_cube_markers/cmake-build-debug /home/anastasia/git/draw_cube_markers/cmake-build-debug/CMakeFiles/markers.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/markers.dir/depend
 
