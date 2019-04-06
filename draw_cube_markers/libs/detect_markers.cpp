@@ -6,6 +6,8 @@
 using namespace std;
 using namespace cv;
 
+string filename = "/home/anastasia/git/draw_cube_markers/calibrate.xml";
+
 namespace {
 const char* about = "Basic marker detection";
 const char* keys  =
@@ -34,7 +36,7 @@ static bool readCameraParameters(string filename, Mat &camMatrix, Mat &distCoeff
     return true;
 }
 
-static bool readDetectorParameters(string filename, Ptr<aruco::DetectorParameters> &params)
+static bool readDetectorParameters1(string filename, Ptr<aruco::DetectorParameters> &params)
 {
     FileStorage fs(filename, FileStorage::READ);
     if(!fs.isOpened())
@@ -89,12 +91,12 @@ int detect_markers(int argc, const char *const *argv)
     Ptr<aruco::DetectorParameters> detectorParams = aruco::DetectorParameters::create();
 
     Ptr<aruco::Dictionary> dictionary =
-            aruco::getPredefinedDictionary(aruco::DICT_6X6_100);//aruco::PREDEFINED_DICTIONARY_NAME(dictionaryId));
+            aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(dictionaryId));//aruco::DICT_6X6_100);//
 /*
     [1.019099074177694320e+03,0.000000000000000000e+00,6.557727729771451095e+02
     0.000000000000000000e+00,1.011927236550148677e+03,3.816077913964442700e+02
     0.000000000000000000e+00,0.000000000000000000e+00,1.000000000000000000e+00];
-*/
+*//*
     camMatrix = Mat::zeros(3, 3, 6);
     int fx = 100;
     int fy = 100;
@@ -105,9 +107,9 @@ int detect_markers(int argc, const char *const *argv)
     camMatrix.at<double>(0, 2) = cx;
     camMatrix.at<double>(1, 2) = cy;
     camMatrix.at<double>(2, 2) = 1;
-/*
+*/
     if(estimatePose) {
-        bool readOk = readCameraParameters(parser.get<string>("c"), camMatrix, distCoeffs);
+        bool readOk = readCameraParameters(filename, camMatrix, distCoeffs);
         if(!readOk) {
             cerr << "Invalid camera file" << endl;
             return 0;
@@ -145,27 +147,29 @@ int detect_markers(int argc, const char *const *argv)
         double currentTime = ((double)getTickCount() - tick) / getTickFrequency();
         totalTime += currentTime;
         totalIterations++;
+/*
         if(totalIterations % 30 == 0)
         {
             cout << "Detection Time = " << currentTime * 1000 << " ms "
                  << "(Mean = " << 1000 * totalTime / double(totalIterations) << " ms)" << endl;
         }
-
-        cout<<"corners.size() = "<<corners.size()<<endl;
+*/
+        //cout<<"corners.size() = "<<corners.size()<<endl;
         // draw results
         image.copyTo(imageCopy);
         if(ids.size() > 0)
         {
             aruco::drawDetectedMarkers(image, corners, ids);
-            for(int i = 0; i < corners.size(); i++)
+            image = draw_cube(image, corners[0], rvecs[0], tvecs[0], camMatrix);
+ /*           for(int i = 0; i < corners.size(); i++)
             {
                 image = draw_cube(image, corners[i], rvecs, tvecs);
             }
-
+*/
             if(estimatePose)
             {
                 for(unsigned int i = 0; i < ids.size(); i++)
-                    aruco::drawAxis(image, camMatrix, distCoeffs, rvecs[i], tvecs[i],
+                    aruco::drawAxis(imageCopy, camMatrix, distCoeffs, rvecs[i], tvecs[i],
                                     markerLength * 0.5f);
             }
         }

@@ -3,6 +3,6 @@ project(markers)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(${PROJECT_NAME} main.cpp libs/detect_markers.cpp libs/draw_cube.cpp)
+add_executable(${PROJECT_NAME} main.cpp libs/detect_markers.cpp libs/draw_cube.cpp libs/calibrate_camera.cpp)
 find_package( OpenCV REQUIRED )
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} )

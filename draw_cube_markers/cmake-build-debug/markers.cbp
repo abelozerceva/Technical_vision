@@ -86,6 +86,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/anastasia/git/draw_cube_markers/libs/calibrate_camera.cpp">
+			<Option target="markers"/>
+		</Unit>
 		<Unit filename="/home/anastasia/git/draw_cube_markers/libs/detect_markers.cpp">
 			<Option target="markers"/>
 		</Unit>

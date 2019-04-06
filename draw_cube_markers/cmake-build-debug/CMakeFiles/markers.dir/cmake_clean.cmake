@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/markers.dir/main.cpp.o"
   "CMakeFiles/markers.dir/libs/detect_markers.cpp.o"
   "CMakeFiles/markers.dir/libs/draw_cube.cpp.o"
+  "CMakeFiles/markers.dir/libs/calibrate_camera.cpp.o"
   "markers.pdb"
   "markers"
 )

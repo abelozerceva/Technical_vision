@@ -123,7 +123,7 @@ int calibrate_camera(int argc, const char *const argv[])
     float markerLength = parser.get<float>("l");
     float markerSeparation = parser.get<float>("s");
     int dictionaryId = parser.get<int>("d");
-    string outputFile = parser.get<String>(0);
+    string outputFile = "/home/anastasia/git/draw_cube_markers/calibrate.xml";//parser.get<String>(0);
 
     int calibrationFlags = 0;
     float aspectRatio = 1;
@@ -250,6 +250,8 @@ int calibrate_camera(int argc, const char *const argv[])
 
     cout << "Rep Error: " << repError << endl;
     cout << "Calibration saved to " << outputFile << endl;
+
+    destroyAllWindows();
 
     return 0;
 }

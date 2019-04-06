@@ -123,6 +123,33 @@ markers/fast:
 	$(MAKE) -f CMakeFiles/markers.dir/build.make CMakeFiles/markers.dir/build
 .PHONY : markers/fast
 
+libs/calibrate_camera.o: libs/calibrate_camera.cpp.o
+
+.PHONY : libs/calibrate_camera.o
+
+# target to build an object file
+libs/calibrate_camera.cpp.o:
+	$(MAKE) -f CMakeFiles/markers.dir/build.make CMakeFiles/markers.dir/libs/calibrate_camera.cpp.o
+.PHONY : libs/calibrate_camera.cpp.o
+
+libs/calibrate_camera.i: libs/calibrate_camera.cpp.i
+
+.PHONY : libs/calibrate_camera.i
+
+# target to preprocess a source file
+libs/calibrate_camera.cpp.i:
+	$(MAKE) -f CMakeFiles/markers.dir/build.make CMakeFiles/markers.dir/libs/calibrate_camera.cpp.i
+.PHONY : libs/calibrate_camera.cpp.i
+
+libs/calibrate_camera.s: libs/calibrate_camera.cpp.s
+
+.PHONY : libs/calibrate_camera.s
+
+# target to generate assembly for a file
+libs/calibrate_camera.cpp.s:
+	$(MAKE) -f CMakeFiles/markers.dir/build.make CMakeFiles/markers.dir/libs/calibrate_camera.cpp.s
+.PHONY : libs/calibrate_camera.cpp.s
+
 libs/detect_markers.o: libs/detect_markers.cpp.o
 
 .PHONY : libs/detect_markers.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... markers"
 	@echo "... edit_cache"
+	@echo "... libs/calibrate_camera.o"
+	@echo "... libs/calibrate_camera.i"
+	@echo "... libs/calibrate_camera.s"
 	@echo "... libs/detect_markers.o"
 	@echo "... libs/detect_markers.i"
 	@echo "... libs/detect_markers.s"
