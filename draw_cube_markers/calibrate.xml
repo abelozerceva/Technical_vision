@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<calibration_time>"Чт 04 апр 2019 09:54:12"</calibration_time>
+<image_width>640</image_width>
+<image_height>480</image_height>
+<flags>0</flags>
+<camera_matrix type_id="opencv-matrix">
+  <rows>3</rows>
+  <cols>3</cols>
+  <dt>d</dt>
+  <data>
+    5.6807524084582121e+02 0. 3.1590514615640541e+02 0.
+    5.8105388835427050e+02 3.0016933340757134e+02 0. 0. 1.</data></camera_matrix>
+<distortion_coefficients type_id="opencv-matrix">
+  <rows>1</rows>
+  <cols>5</cols>
+  <dt>d</dt>
+  <data>
+    -9.6935277436373729e-02 4.0381154349498921e-01
+    3.2072237867387700e-02 -1.8380538162406654e-03
+    -6.3216517280134077e-01</data></distortion_coefficients>
+<avg_reprojection_error>1.3438041211824665e+00</avg_reprojection_error>
+</opencv_storage>
