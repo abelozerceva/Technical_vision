@@ -11,7 +11,228 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e25664d1-3ec7-4a24-98bb-d7415fac1380" name="Default Changelist" comment="" />
+    <list default="true" id="e25664d1-3ec7-4a24-98bb-d7415fac1380" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../build-Lab4-Desktop-Debug/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab4-Desktop-Debug/Lab4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab4-Desktop-Debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab4-Desktop-Debug/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab4-Desktop_Qt_5_12_1_GCC_64bit-Debug/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab4-Desktop_Qt_5_12_1_GCC_64bit-Debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_2-Desktop-Release/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_2-Desktop-Release/Lab_2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_2-Desktop-Release/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_2-Desktop-Release/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_2-Desktop_Qt_5_12_1_GCC_64bit-Debug/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_2-Desktop_Qt_5_12_1_GCC_64bit-Debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_3-Desktop-Debug/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_3-Desktop-Debug/Lab_3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_3-Desktop-Debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_3-Desktop-Debug/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_3-Desktop_Qt_5_12_1_GCC_64bit-Debug/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_3-Desktop_Qt_5_12_1_GCC_64bit-Debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_4-Desktop-Release/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_4-Desktop-Release/Lab_4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_4-Desktop-Release/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_4-Desktop-Release/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_5-Desktop_Qt_5_12_1_GCC_64bit-Debug/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_5-Desktop_Qt_5_12_1_GCC_64bit-Debug/Lab_5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_5-Desktop_Qt_5_12_1_GCC_64bit-Debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_5-Desktop_Qt_5_12_1_GCC_64bit-Debug/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-Debug/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-Debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-Debug/calibrate_camera.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Lab_6.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/Lab_6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/Lab_6.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-Lab_6-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/3.10.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/calibrate.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/calibrate.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/calibrate.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/calibrate.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/calibrate.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/calibrate.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/calibrate.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/calibrate.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit--DCMAKE_BUILD_TYPE/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/3.10.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/calibrate.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/calibrate.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/calibrate.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/calibrate.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/calibrate.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/calibrate.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/calibrate.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/calibrate.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041eu0442u043bu0430u0434u043au0430/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/calibrate.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/calibrate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/calibrate.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-calibrate-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-make_marker-Desktop_Qt_5_12_1_GCC_64bit-Debug/.qmake.stash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-make_marker-Desktop_Qt_5_12_1_GCC_64bit-Debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-make_marker-Desktop_Qt_5_12_1_GCC_64bit-Debug/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-make_marker-Desktop_Qt_5_12_1_GCC_64bit-Debug/make_marker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/3.10.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/detect_markers.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/detect_markers.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/detect_markers.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/detect_markers.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/detect_markers.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/detect_markers.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/lib.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/lib.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/lib.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/lib.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/lib.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/lib.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/lib.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/lib.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/libs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/libs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/libs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/libs.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/libs.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/libs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/libs/calibrate_camera.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/libs/detect_markers.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/libs/draw_cube.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/markers.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/markers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-markers-Desktop_Qt_5_12_1_GCC_64bit-u041fu043e u0443u043cu043eu043bu0447u0430u043du0438u044e/markers.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/markers.dir/libs/draw_cube.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/markers.dir/libs/draw_cube.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/markers" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/markers" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +246,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+            <state relative-caret-position="240">
+              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -49,7 +270,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/draw_cube.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="2760">
               <caret line="184" selection-start-line="184" selection-end-line="184" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -58,11 +279,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="54" />
+            <state relative-caret-position="105">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -124,7 +345,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,6 +361,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,6 +419,7 @@
       <workItem from="1554361417449" duration="5417000" />
       <workItem from="1554491196623" duration="3559000" />
       <workItem from="1554579284352" duration="199000" />
+      <workItem from="1554760057822" duration="221000" />
     </task>
     <task id="LOCAL-00001" summary="кривой кубик есть">
       <created>1554278668952</created>
@@ -213,11 +435,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554579439959</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="в целом норм кубик, но почему-то в некоторый положениях косоебится">
+      <created>1554760269837</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554760269837</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59374000" />
+    <option name="totallyTimeSpent" value="59595000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -230,23 +459,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1530303" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15530303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.68030304" weight="0.29586777" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.67954546" weight="0.29586777" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.71060604" weight="0.2" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" weight="0.3289256" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.7189394" weight="0.41157025" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.7181818" weight="0.41157025" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49924242" weight="0.3289256" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.31969696" side_tool="true" visible="true" weight="0.31735536" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49848485" weight="0.3289256" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022727" side_tool="true" visible="true" weight="0.3289256" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" sideWeight="0.49772727" visible="true" weight="0.3289256" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.3294893" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -260,7 +488,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="кривой кубик есть" />
     <MESSAGE value="оно почти ровное, не знаю как еще править это" />
-    <option name="LAST_COMMIT_MESSAGE" value="оно почти ровное, не знаю как еще править это" />
+    <MESSAGE value="в целом норм кубик, но почему-то в некоторый положениях косоебится" />
+    <option name="LAST_COMMIT_MESSAGE" value="в целом норм кубик, но почему-то в некоторый положениях косоебится" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -397,19 +626,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/detect_markers.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
           <caret line="162" column="66" selection-start-line="162" selection-start-column="66" selection-end-line="162" selection-end-column="66" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/draw_cube.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2760">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -433,20 +665,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/draw_cube.cpp">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="54" />
+        <state relative-caret-position="240">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
         </state>
       </provider>
     </entry>
