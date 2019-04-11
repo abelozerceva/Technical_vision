@@ -116,6 +116,7 @@ int detect_markers(int argc, const char *const *argv)
         }
     }
 //*/
+    //cout << "camMatrix = " << camMatrix << endl;
     if (parser.has("refine"))
     {
         //override cornerRefinementMethod read from config file
@@ -143,6 +144,7 @@ int detect_markers(int argc, const char *const *argv)
             aruco::estimatePoseSingleMarkers(corners, markerLength, camMatrix, distCoeffs, rvecs,
                                              tvecs);
             //image = draw_cube(image, rvecs, tvecs);
+            //cout << "tvec = " << tvecs[0] << endl;
         }
         double currentTime = ((double)getTickCount() - tick) / getTickFrequency();
         totalTime += currentTime;
